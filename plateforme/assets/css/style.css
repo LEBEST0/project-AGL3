@@ -1298,9 +1298,11 @@ h6 {
   margin-bottom: 10px;
 }
 .film{
-  width: 200px;
-  height: 200pxpx;
-  margin-bottom: 20px;
+  width: 240px;
+  height:auto;
+  margin: auto;
+  /* border:  solid; */
+  padding-bottom: 10px;
 }
 .bas{
   display: flex;
@@ -1318,8 +1320,17 @@ h6 {
   border-radius: 50%;
   
 }
+.img1 img{
+  height: 50px;
+  border-radius: 50%;
+}
 .bas div{
   height: 90px;
+}
+
+.profil{
+  text-align: left;
+
 }
 .bas div p:nth-child(1){
   background-color: green;
