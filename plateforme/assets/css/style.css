@@ -9,7 +9,7 @@
 
 *{
 font-family: "inter";
-  color: #022D54;
+color: #022D54;
 }
 :root {
   scroll-behavior: smooth;
@@ -22,7 +22,7 @@ body {
 }
 
 a {
-  color: #4154f1;
+  color: #022D54;
   text-decoration: none;
 }
 
@@ -37,7 +37,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Nunito", sans-serif;
+  font-family: "inter";
 }
 
 /*--------------------------------------------------------------
