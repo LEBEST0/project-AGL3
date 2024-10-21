@@ -1,0 +1,18 @@
+.afficher-film{
+    text-align: center;
+}
+
+.globale{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgba(0,0,0,.5);
+    padding-top: 20px;
+    border-radius: 20px;
+}
+.card{
+    display: flex;
+    align-items: center;
+}
+
+

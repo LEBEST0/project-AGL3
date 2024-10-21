@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../icon/logout.svg" rel="icon">
+    <link href="../icon/logo.jfif" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/ajouter.css">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <title>Ajouter film</title>
+</head>
+<body>
+    <header id="header" class="header fixed-top d-flex align-items-center">
+        <!-- le logo  menu burger  -->
+    
+        <div class="d-flex align-items-center justify-content-between">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="../icon/logo.jfif" alt="">
+            <span class="d-none d-lg-block">Responsable d'inspection</span>
+          </a>
+          <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div><!--Fin Logo -->
+    
+        <!-- Bare de recherche  -->
+    
+        <div class="search-bar">
+          <form class="search-form d-flex align-items-center" method="POST" action="#">
+            <input type="text" name="query" placeholder="Recherche" title="mettre la clée de recherche">
+            <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+          </form>
+        </div><!-- Fin  de la bare de recherche  -->
+    
+        <nav class="header-nav ms-auto">
+          <ul class="d-flex align-items-center">
+            <li class="nav-item d-block d-lg-none">
+              <a class="nav-link nav-icon search-bar-toggle " href="#">
+                <i class="bi bi-search"></i>
+              </a>
+            </li><!-- fin de icon de la bare  recherche-->
+    
+            <li class="nav-item dropdown">
+              <!-- Cloche de notification icon-->
+              <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                <i class="bi bi-bell"></i>
+                <span class="badge bg-primary badge-number">4</span>
+              </a><!-- Fin cloche -->
+    
+              <!-- lorsqu'on clique sur la cloche  -->
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                <li class="dropdown-header">
+                  Vous avez 4 nouvelles notifications
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+    
+                <li class="notification-item">
+                  <i class="bi bi-exclamation-circle text-warning"></i>
+                  <div>
+                    <h4>Lorem Ipsum</h4>
+                    <p>Quae dolorem earum veritatis oditseno</p>
+                    <p>30 min. ago</p>
+                  </div>
+                </li>
+    
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+    
+                <li class="notification-item">
+                  <i class="bi bi-x-circle text-danger"></i>
+                  <div>
+                    <h4>Atque rerum nesciunt</h4>
+                    <p>Quae dolorem earum veritatis oditseno</p>
+                    <p>1 hr. ago</p>
+                  </div>
+                </li>
+    
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+    
+                <li class="notification-item">
+                  <i class="bi bi-check-circle text-success"></i>
+                  <div>
+                    <h4>Sit rerum fuga</h4>
+                    <p>Quae dolorem earum veritatis oditseno</p>
+                    <p>2 hrs. ago</p>
+                  </div>
+                </li>
+    
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+    
+                <li class="notification-item">
+                  <i class="bi bi-info-circle text-primary"></i>
+                  <div>
+                    <h4>Dicta reprehenderit</h4>
+                    <p>Quae dolorem earum veritatis oditseno</p>
+                    <p>4 hrs. ago</p>
+                  </div>
+                </li>
+    
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                
+    
+              </ul><!-- End Notification Dropdown Items -->
+    
+            </li><!-- Fin du contenu de la cloche de  Notification  -->
+    
+            
+    
+            <li class="nav-item dropdown pe-3">
+              <!-- la photo de profil qui se trouve  -->
+              <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                <img src="../icon/kourouma.png" alt="Profile" class="rounded-circle">
+                <span class="d-none d-md-block dropdown-toggle ps-2">N. Adama</span>
+              </a><!-- Fin de la photo -->
+    
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                <li class="dropdown-header">
+                  <h6>Nouho adama</h6>
+                  <span>Responsable d'inspection</span>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+    
+                <li>
+                  <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                    <i class="bi bi-person"></i>
+                    <span>Mon Profil</span>
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+    
+                <li>
+                  <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                    <i class="bi bi-gear"></i>
+                    <span>Paramètres du compte</span>
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+    
+    
+                <li>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Se déconnecter</span>
+                  </a>
+                </li>
+    
+              </ul><!-- End Profile Dropdown Items -->
+            </li><!-- fin Profil Nav -->
+    
+          </ul>
+        </nav><!-- fin Icons Navigation -->
+    
+      </header><!-- End Header -->
+    
+      <!-- ======= Sidebar ======= -->
+      <aside id="sidebar" class="sidebar">
+    
+        <ul class="sidebar-nav" id="sidebar-nav">
+          <!-- icone de. tableau de bord  -->
+          <li class="nav-item">
+            <a class="nav-link " href="index.html">
+              <i class="bi bi-grid"></i>
+              <span>Tableau de bord</span>
+            </a>
+          </li><!-- fin de  l'icone de tableau de bord-->
+    
+    
+    
+          <!-- ajouter film  -->
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="users-profile.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-magnet" viewBox="0 0 16 16">
+                    <path d="M8 1a7 7 0 0 0-7 7v3h4V8a3 3 0 0 1 6 0v3h4V8a7 7 0 0 0-7-7m7 11h-4v3h4zM5 12H1v3h4zM0 8a8 8 0 1 1 16 0v8h-6V8a2 2 0 1 0-4 0v8H0z"/>
+                </svg>
+              <span class="icon-ajouter">Ajouter  film</span>
+            </a>
+          </li><!-- fin Profil  -->
+    
+          <!-- Aficher   film sur la sidBar  -->
+    
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="./afficher-film.html">
+              <i class="bi bi-person"></i>
+              <span>Afficher film</span>
+            </a>
+          </li><!-- fin Profil  -->
+          <!-- profil sur la sidBar  -->
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="users-profile.html">
+              <i class="bi bi-person"></i>
+              <span>Profil</span>
+            </a>
+          </li><!-- fin Profil  -->
+    
+    
+        </ul>
+    
+      </aside><!-- Fin de la Sidebar-->
+    
+<!-- debut main -->
+
+      <main id="main" class="main ajouter">
+
+        <h1 class="titre-insertion">Insertion de film</h1>
+        <!-- le formulaire de d'insertion de film -->
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Nom Réalisateur</span>
+            <input type="text" class="form-control" placeholder="Entrer le nom du réalisateur" aria-label="Username" aria-describedby="basic-addon1" required>
+        </div>
+          
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Nom du producteur</span>
+            <input type="text" class="form-control" placeholder="Entrer le nom du producteur" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Nom du film</span>
+            <input type="text" class="form-control" placeholder="Entrer le nom du film" aria-label="Username" aria-describedby="basic-addon1" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Image du film</span>
+            <input type="file" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" name="" required>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg enregistrer">ENREGISTRER</button>
+
+    
+
+      </main><!-- fin de  main -->
+
+<!-- fin de main -->
+    
+      <!-- Vendor JS Files -->
+      <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/chart.js/chart.umd.js"></script>
+      <script src="assets/vendor/echarts/echarts.min.js"></script>
+      <script src="assets/vendor/quill/quill.js"></script>
+      <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+      <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+    
+      <!-- Template Main JS File -->
+      <script src="assets/js/main.js"></script>
+</body>
+</html>
