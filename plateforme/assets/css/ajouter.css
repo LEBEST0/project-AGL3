@@ -1,0 +1,41 @@
+
+
+.titre-insertion{
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.form-insertion{
+    border: solid;
+    width: 80%;
+    margin: 10px auto;
+    height: auto ;
+}
+
+.enregistrer{
+    max-width: 200px;
+}
+
+.mb-3{
+    width: 70%;
+    margin: 50px auto;
+}
+
+.enregistrer{
+    display: block;
+    margin: auto;
+}
+
+.ajouter{
+    background: url("../img/imagemain.jpg") center no-repeat;
+    object-fit: cove;
+    background-position: center;
+    background-size:cover;
+    height: 100vh;
+}
+
+.icon-ajouter{
+    margin-left: 10px;
+}
