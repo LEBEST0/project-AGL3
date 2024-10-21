@@ -87,6 +87,7 @@ a{
   height: 70%;
   width: 100%;
   padding-top: 1.2em;
+ 
 
 
 
@@ -117,7 +118,7 @@ gap: 0.8em;
 }
 #option_connexion ul li a:hover{
     color: rgba(150, 170, 182,0.6);
-    transition-duration: 0.4s;
+    transition: all 0.4 s;
 }
 
 
