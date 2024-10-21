@@ -6,6 +6,17 @@
 
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
 
 main{
     height: 100vh;
@@ -16,8 +27,9 @@ main{
 
 .dashboard{
     background-color:#282727;
-    width: 350px;
+    width: 420px;
     height: 100%;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .dashboard header{
@@ -46,4 +58,166 @@ main{
 
 .dashboard header h2{
     color: white;
+}
+
+.dashboard .items{
+    height: 100%;
+    width: 100%;
+}
+
+.dashboard .items ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+
+    margin-top: 100px;
+}
+
+.dashboard .items ul .item{
+    width: 70%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    margin-top: 30px;
+}
+
+.dashboard .items ul .item li{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.dashboard .items ul .item li img{
+    height: 30px;    
+    filter: brightness(0) invert(1);
+}
+
+.dashboard .items ul .item li h2{
+    color: white;
+    font-size: large;
+    margin-left: 15px;
+}
+
+.item_active{
+    background-color: #c21919 ;
+    border-radius: 15px;
+}
+
+.simple_divider{
+    margin-top: 30px;
+    width: 80%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.373);
+}
+
+
+.right_side{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.right_side .main_container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.right_side .main_container header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.right_side .main_container header .first_header{
+    height:auto;
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.right_side .main_container header .first_header h2{
+    color: white;
+    font-size: medium;
+    font-weight: 200;
+}
+
+.right_side .main_container header .first_header h2 span{
+    color: white;
+    font-size: medium;
+    font-weight:bold;
+}
+
+.right_side .main_container header .first_header .search_container{
+    width: auto;    
+    height: 55px;
+    border : 1px solid rgba(255, 255, 255, 0.315);
+    display: flex;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.right_side .main_container header .first_header .search_container img{
+    height: 30px;
+    width: 30px;
+    filter: brightness(0) invert(1);
+    margin-left: 10px;
+    opacity: 0.5;
+}
+
+.right_side .main_container header .first_header .search_container form input{
+    height: 100%;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    margin-left: 15px;
+    color: white;
+}
+
+.right_side .main_container header .first_header .search_container form input:focus{
+    border: none;
+    outline: none;
+}
+
+.right_side .main_container header .first_header .search_container form input:focus::placeholder{
+    color: transparent;
+}
+
+.infos_container{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.profile_picture{
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.infos_container h2{
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+.carrousel{
+    height: 500px;
+    width: 100%;
+    background-color: white;
+    margin-top: 30px;
 }
