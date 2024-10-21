@@ -45,7 +45,7 @@ a{
 #main .section #title_page{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     
 }
@@ -55,15 +55,11 @@ a{
    
     
   }
-  #p-unik{
-    border: solid white;
-    background-color: white;
-  }
 #title-tunis{
     color: red;
     font-size: 48px;
     font-family: "inter";
-    border: solid white;
+    
    
 
 }
@@ -118,6 +114,10 @@ gap: 0.8em;
     width: 1.5px; /* Largeur de l'élément avant */
     margin-right: 10px; /* Espace entre l'élément avant et le texte */
     vertical-align: middle; 
+}
+#option_connexion ul li a:hover{
+    color: rgba(150, 170, 182,0.6);
+    transition-duration: 0.4s;
 }
 
 
