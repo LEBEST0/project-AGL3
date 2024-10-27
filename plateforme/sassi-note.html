@@ -29,7 +29,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/accueil-president.css">
+  <link rel="stylesheet" href="./assets/css/note.css">
 
 
 </head>
@@ -179,7 +179,7 @@
 
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="connexion.html">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Se déconnecter</span>
               </a>
@@ -204,17 +204,15 @@
           <span>Tableau de bord</span>
         </a>
       </li><!-- fin de  l'icone de tableau de bord-->
+           
 
-
-
-      <!-- Saissir note sur la sidBar  -->
+      <!-- editert note sur la sidBar  -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="sassi-note.html">
+        <a class="nav-link collapsed" href="users-profile.html">
           <i class="bi bi-person"></i>
-          <span>Saissir note</span>
+          <span>Editer note</span>
         </a>
-      </li><!-- finSaissir note  -->
-
+      </li><!-- editer note   -->
 
       <!-- Consulter planning sur la sidBar  -->
       <li class="nav-item">
@@ -237,58 +235,28 @@
   </aside><!-- Fin de la Sidebar-->
 
   <main id="main" class="main">
-    <h1> Historique de note des film </h1>
-    <div class="historique">
-      
-      <div class="card" style="width: 18rem;">
-        <img src="./assets/img/card.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Speed</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">13/20</a>
+    <div class="note">
+
+        <h1>Enregistrement de note </h1>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Nom de projetction</span>
+            <input type="text" class="form-control" placeholder="nom" aria-label="Username" aria-describedby="basic-addon1">
         </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="./assets/img/card.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Speed</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">15/20</a>
+          
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Date</span>
+            <input type="date" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">
         </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="./assets/img/card.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Speed</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">10/20</a>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Note</span>
+            <input type="number" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">
         </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="./assets/img/card.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Speed</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">12/20</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="./assets/img/card.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Speed</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">17/20</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="./assets/img/card.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Speed</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">14/20</a>
-        </div>
-      </div>
+        <button type="button" class="btn btn-outline-success">Noter</button>
     </div>
+      
+      
+      
+      
     
 
   </main><!-- fin de  main -->

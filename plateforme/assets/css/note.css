@@ -1,0 +1,16 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.note{
+    width: 90%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    padding-bottom: 10px;
+}

@@ -29,11 +29,9 @@
 }
 
 .ajouter{
-    background: url("../img/imagemain.jpg") center no-repeat;
-    object-fit: cove;
-    background-position: center;
-    background-size:cover;
+  
     height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .icon-ajouter{
