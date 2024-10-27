@@ -24,7 +24,7 @@ main{
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-    border: solid red;
+    
 }
 
 
@@ -34,10 +34,10 @@ main{
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #202020 ;
     color: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 1rem 2rem;
     z-index: 1000;
@@ -52,15 +52,18 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #444;
+    background-color: #202020 ;
     padding: 0.5rem;
     border-radius: 20px;
+    border: 1px solid white;
+   
   }
   
   .search_container img {
     width: 20px;
     height: 20px;
     margin-right: 0.5rem;
+    filter: brightness(0) invert(1);
   }
   
   .search_container input[type="text"] {
@@ -97,22 +100,58 @@ main{
     color: #FF2828;
   }
 
-  
+  .info_icon{
+    width: 2em;
+    height: 2em;
+  }
 
 
 #section_carousel{
     margin-top: 6em;
-    border: solid blue;
+   
+    background-color: white;
     height: 400px;
     width: 100%;
 }
+
+
+
+/* parcourez*/
+.first_row{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    padding: 1em;
+    color: white;
+}
+
+.catalog .first_row h2{
+    color: white;
+}
+
+.first_row .show_all_button{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.catalog .first_row .show_all_button h2 {
+   
+    font-size: 24px ;
+}
+
+
+
 /* Grid Container */
 #grid_item {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid with min 200px per item */
     gap: 20px; /* Spacing between items */
     padding: 20px;
-    border: solid green;
+    
   }
   
   /* General layout for movie items */
@@ -130,14 +169,13 @@ main{
     display: flex;
     flex-direction: row;
     align-items: start;
-    border: solid green;
+    justify-content: start;  
+   
     width: 100%;
-    text-decoration: none; /* Enlever le soulignement du lien */
-    color: inherit; /* Garder la couleur du texte par défaut */
   }
   #title_movie img {
-    width: 24px;                /* Définir la largeur de l'icône (ajustez selon vos besoins) */
-    height: 24px;               /* Définir la hauteur de l'icône pour conserver le rapport d'aspect */
+    width: 20px;                /* Définir la largeur de l'icône (ajustez selon vos besoins) */
+    height: 50px;               /* Définir la hauteur de l'icône pour conserver le rapport d'aspect */
     margin-left: 8px;           /* Ajouter un espace entre le texte et l'icône */
     vertical-align: middle;
 }
@@ -189,7 +227,7 @@ main{
     flex-direction: column;
     margin-top: 10px;
     align-items: start;
-    border: solid blue;
+   
   }
   
   .movie_item .movie_makers .maker, 
