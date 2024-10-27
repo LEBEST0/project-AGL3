@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-
 }
 
 a {
@@ -19,16 +18,17 @@ a {
   
 
 main{
-    height: 3000px;
+    height: 100vh;
     width: 100%;
     background-color: #202020 ;
     display: flex;
+    overflow-y: scroll;
 }
 
 .dashboard{
     background-color:#282727;
     width: 420px;
-    height:100wh;
+    height: 100%;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -120,11 +120,12 @@ main{
     left: 0;
     right: 0;
     box-sizing: border-box;
+    background-color:#282727;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-
 .right_side{
-    height: 100%;
+    height: 3000px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -136,6 +137,8 @@ main{
     display: flex;
     width: 100%;
     flex-direction: column;
+    position: relative;
+
 }
 
 .right_side .main_container header{
@@ -167,40 +170,6 @@ main{
     font-weight:bold;
 }
 
-.right_side .main_container header .first_header .search_container{
-    width: auto;    
-    height: 55px;
-    border : 1px solid rgba(255, 255, 255, 0.315);
-    display: flex;
-    padding: 10px;
-    border-radius: 30px;
-}
-
-.right_side .main_container header .first_header .search_container img{
-    height: 30px;
-    width: 30px;
-    filter: brightness(0) invert(1);
-    margin-left: 10px;
-    opacity: 0.5;
-}
-
-.right_side .main_container header .first_header .search_container form input{
-    height: 100%;
-    width: 500px;
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    margin-left: 15px;
-    color: white;
-}
-
-.right_side .main_container header .first_header .search_container form input:focus{
-    border: none;
-    outline: none;
-}
-
-.right_side .main_container header .first_header .search_container form input:focus::placeholder{
-    color: transparent;
-}
 
 .infos_container{
     height: auto;
@@ -223,102 +192,124 @@ main{
     margin-top: 10px;
 }
 
-
-
-.carrousel{
-    height: 500px;
-    width: 100%;
-    background-color: white;
-    margin-top: 30px;
-}
-
-.catalog{
+.page_name{
     width: 100%;
     height: auto;
-    margin-top: 60px;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-.catalog .first_row{
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.catalog .first_row h2{
+.page_name h2{
+    font-weight: 500;
+    font-size:35px;
     color: white;
 }
 
-.catalog .first_row .show_all_button{
-    border: 1px solid white;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-}
 
-.catalog .first_row .show_all_button h2 {
-    font-weight: 200;
-    font-size: large ;
-}
-
-.catalog .second_row{
-    margin-top: 30px;
-    width: 90%;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-}
-
-.catalog .second_row .movie_row{
+/* Plannings  */
+.planning_container{
+    margin-top: 60px;
     width: 100%;
-    height: auto;
-    display: flex;
-}
-
-.movie_item{
     display: flex;
     flex-direction: column;
 }
 
-.movie_item .movie_cover{
-    height: 200px;
-    width: 200px;
-
-    background-color: white;
+.planning_container .planning{
+     display: flex;
+     flex-direction: column;
 }
 
-.movie_item h2{
-    margin-top: 20px;
+.planning_container .planning .planning_date{
     color: white;
+    font-weight: lighter;
+    width: 100%;
 }
 
-.movie_item .movie_infos{
+.planning_container .planning .planning_date h2{
+margin-left: 60px;
+font-weight: 500;
+font-size: 20px
+}
+
+.planning_container .planning .planning_row{
+    border-top:1px solid rgba(255, 255, 255, 0.3) ;
+    border-bottom:1px solid rgba(255, 255, 255, 0.3) ;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.planning_container .planning .planning_row .planning_item{
     display: flex;
 }
 
-.movie_item .movie_infos .maker_profile_photo{
-    height: 70px;
-    width : 70px;
-    border-radius: 50px;
+.planning_container .planning .planning_row .planning_item .movie_cover{
+    height: 250px; 
+    width: 250px;
     background-color: white;
-    margin-top: 20px;
 }
 
-.movie_item .movie_infos .movie_surplus{
-    margin-left: 10px;
+.planning_container .planning .planning_row .planning_item .infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    margin-left: 7px;
 }
 
-.movie_item .movie_infos .movie_surplus .certification_check{
-    border-radius: 50px;
-    margin-top: 15px;
-    height: 30px;
-    width: 30px;
-    background-color: #14BB1F;
-}
-
-.movie_item .movie_infos .movie_surplus h2{
-    font-size: larger;
+.planning_container .planning .planning_row .planning_item .infos .planning_infos .hour{
     font-weight: 200;
+    font-size: 20px;
+}
+
+.planning_container .planning .planning_row .planning_item .infos .planning_infos .salle{
+    font-weight: 900;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.planning_container .planning .planning_row .planning_item .infos .planning_infos .movie_name{
+    font-weight: 900;
+    font-size: 20px;
+    color: #c21919;
+}
+
+.planning_container .planning .planning_row .planning_item .infos .makers_name{
+    margin-bottom: 10px;
+}
+
+.planning_container .planning .planning_row .planning_item .infos .makers_name h2{
+    font-weight: 500;
+    font-size: 20px;
+    transition: 300ms;
+}
+
+.planning_container .planning .planning_row .planning_item .infos .makers_name h2:hover{
+    color: #fd4c4c;
+}
+
+
+/* Button ajouter */
+.add_button_absolute{
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+}
+
+.add_button{
+    background-color:#c21919;
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; ;
+}
+
+.add_button img{
+    filter: brightness(0)invert(1);
+    height: 40px;
+    width: 40px;
 }

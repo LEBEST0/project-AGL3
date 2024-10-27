@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="resp_insp.css">
-
+    <link rel="stylesheet" href="gerer_doc.css">
 </head>
 <body>
-      <main>
+    
+    <main>
 
         <!-- Partie Gauche -->
         <div class="dashboard">
@@ -22,9 +22,9 @@
 
             <div class="items">
                 <ul>
-                    <a href="#" class="item item_active"><li > <img src="static/icons/Play_icon.png" alt=""> <h2> Voir Documentaire </h2> </li></a>
+                    <a href="#" class="item "><li > <img src="static/icons/Play_icon.png" alt=""> <h2> Voir Documentaire </h2> </li></a>
                     <a href="#" class="item" > <li> <img src="static/icons/Calendar_icon.png" alt=""> <h2>Planning</h2> </li> </a>
-                    <a href="#" class="item" > <li> <img src="static/icons/Plus_icon.png" alt=""> <h2>Gérer Doc.</h2> </li> </a>
+                    <a href="#" class="item item_active" > <li> <img src="static/icons/Plus_icon.png" alt=""> <h2>Gérer Doc.</h2> </li> </a>
                     <a href="#" class="item" > <li> <img src="static/icons/Étoile_icon.png" alt=""> <h2>Noter</h2> </li> </a>
                     <div class="simple_divider horizontal"></div>   
                     <a href="#" class="item" > <li> <img src="static/icons/Profile_icon.png" alt=""> <h2>Profile</h2> </li> </a> 
@@ -38,7 +38,8 @@
         </div>
 
         <!-- Partie Droite -->
-        <div class="right_side">
+         <div class="right_side">
+
             <div class="main_container">
 
                 <header>
@@ -54,6 +55,7 @@
                             </form>
                         </div>
 
+
                         <div class="infos_container">
                             <div class="profile_picture">
                             </div>
@@ -61,46 +63,58 @@
                         </div>
                     </div>
 
-                    <div class="carrousel">
-                    </div>
+                   <div class="page_name"> <h2>GERER DOCUMENTAIRES</h2></div>
+
                 </header>
-               
-                <div class="catalog">
-                    <div class="first_row">
-                        <h2>Parcourez les documentaires</h2>
-                        <div class="show_all_button">
-                            <h2>
-                                Catalogue  ></h2>
-                        </div>
-                    </div>
-                    
-                    <div class="second_row">
-                        <div class="movie_row">
-                            
-                            <div class="movie_item">
-                                <div class="movie_cover">   
-                                </div>
 
-                                <h2>Avatar</h2>
-                                
-                                <div class="movie_infos">
-                                    <div class="maker_profile_photo">
-                                    </div>
-                                    <div class="movie_surplus">
-                                        <div class="certification_check"></div>
-                                        <h2>Gakpa Ésaïe</h2>
-                                    </div>
+                <div class="movie_part">
+
+                    <div class="movies_container">
+
+                       
+                        <div class="movie_item">
+                            <a href="#">  <div class="movie_cover">
+                               <div class="image"><img src="static/images/Avatar_cover.jpg" alt=""></div> 
+                                <div class="edit_container"> 
+                                <a href="">
+                                    <img src="static/icons/Modifier_icon.png" alt="">
+                                </a> 
                                 </div>
+                            </div></a>
+                          <a href=""> <h2 class="movie_name">Avatar</h2> </a>
+                            <div class="movie_makers">
+                             <a href=""> <div class="maker"> <img src="static/icons/Camera_icon.png" alt=""><h2>Modeste Kassem (R)</h2></div> </a>
+                               <a href=""> <div class="producer"> <img src="static/icons/Video_icon.png" alt=""><h2>Gakpa Ésaie (P)</h2></div> </a>
                             </div>
-
                         </div>
+
+                        
+                       
+
+                        
+
                     </div>
 
                 </div>
 
+                
+
+
             </div>
-           
-        </div>
-      </main>
+
+            <div class="add_button_absolute">
+                <div class="tabs">
+                <a href="#"> <div class="tab"> <h2>Producteur</h2></div> </a>
+                <a href="#"> <div class="tab"> <h2>Réalisateur</h2></div> </a>
+                <a href="#"> <div class="tab tab_active"> <h2>Documentaire</h2></div> </a>
+                </div>
+
+                <a href="#"><div class="add_button"> <img src="static/icons/Plus_icons_2.png" alt=""> </div></a>
+              </div>
+
+         </div>
+
+    </main>
+
 </body>
 </html>

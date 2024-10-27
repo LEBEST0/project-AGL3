@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+main{
+    height: 100vh;
+    width: 100%;
+    background-color: #202020 ;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+
+
+.left_arrow_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+}
+
+.left_arrow_container .back_button{
+    margin-top: 40px;
+    margin-left: 70px;
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms;
+}
+
+.left_arrow_container .back_button:hover{
+  background-color: rgba(255, 255, 255, 0.236);
+}
+
+.left_arrow_container .back_button img{
+    height: 30px;
+    width: 30px;
+    filter: brightness(0)invert(1);
+}
+
+.page_name{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.page_name h2{
+    font-weight: 500;
+    font-size:35px;
+    color: white;
+}
+
+.page_name h2 span{
+    color :#FF0404;
+    font-weight: 900;
+}
+
+
+
+.form_container{
+    display: flex;
+    width: 100%;  
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.form_container form .note{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.select-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+    width: 150px;
+  }
+
+  .select-container select {
+    background: #202020;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    appearance: none;
+    outline: none;
+  }
+
+  .select-container::after {
+    content: "▼";
+    margin-left: auto;
+    color: #ccc;
+  }
+
+  .number-input {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+  }
+
+  .number-input::-webkit-inner-spin-button {
+    appearance: auto;
+  }
+
+form .button_container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+form button{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 55px;
+  width: 200px;
+  background-color: #C21919;
+  border: none;
+  outline: none;
+  margin-top: 60px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+form button:hover{
+  background-color: #630909;
+}
+
+form button img{
+  height: 30px;
+  width: 30px;
+  filter: brightness(0)invert(1);
+}
+
+form button h2{
+  color: white;
+}
