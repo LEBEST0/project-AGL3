@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+main{
+    height: 100vh;
+    width: 100%;
+    background-color: #202020 ;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    border: solid red;
+}
+
+
+
+/* Navbar fixe */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+   
+    height: 6em;
+  }
+  
+
+  
+  /* Conteneur de recherche */
+  .search_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #444;
+    padding: 0.5rem;
+    border-radius: 20px;
+  }
+  
+  .search_container img {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+  }
+  
+  .search_container input[type="text"] {
+    border: none;
+    background: none;
+    outline: none;
+    color: #fff;
+    font-size: 1rem;
+    width: 20em;
+  }
+  
+  .search_container input::placeholder {
+    color: #aaa;
+  }
+  
+  /* Liens de la navbar */
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 2rem;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .nav-links a:hover {
+    color: #FF2828;
+  }
+
+  
+
+
+#section_carousel{
+    margin-top: 6em;
+    border: solid blue;
+    height: 400px;
+    width: 100%;
+}
+/* Grid Container */
+#grid_item {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid with min 200px per item */
+    gap: 20px; /* Spacing between items */
+    padding: 20px;
+    border: solid green;
+  }
+  
+  /* General layout for movie items */
+  .movie_item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #202020 ;
+    padding: 1px;
+    border-radius: 8px;
+  }
+  
+  /* Movie cover styling */
+  #title_movie{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    border: solid green;
+    width: 100%;
+    text-decoration: none; /* Enlever le soulignement du lien */
+    color: inherit; /* Garder la couleur du texte par défaut */
+  }
+  #title_movie img {
+    width: 24px;                /* Définir la largeur de l'icône (ajustez selon vos besoins) */
+    height: 24px;               /* Définir la hauteur de l'icône pour conserver le rapport d'aspect */
+    margin-left: 8px;           /* Ajouter un espace entre le texte et l'icône */
+    vertical-align: middle;
+}
+  .movie_item .movie_cover {
+    width: 100%;
+    height: 230px;
+    background-color: #202020 ;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+  }
+  
+  .movie_item .movie_cover .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Edit container styling */
+  .movie_item .movie_cover .edit_container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+  }
+  
+  .movie_item .movie_cover .edit_container a img {
+    height: 30px;
+    width: 30px;
+    filter: brightness(0) invert(1);
+   
+    border-radius: 4px;
+  }
+  
+  /* Movie name styling */
+  .movie_item .movie_name {
+    color: white;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  /* Movie makers styling */
+  .movie_item .movie_makers {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: start;
+    border: solid blue;
+  }
+  
+  .movie_item .movie_makers .maker, 
+  .movie_item .movie_makers .producer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .movie_item .movie_makers .maker h2, 
+  .movie_item .movie_makers .producer h2 {
+    color: white;
+    margin-left: 10px;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+  .movie_item .movie_makers img {
+    filter: brightness(0) invert(1);
+    width: 20px;
+    height: 20px;
+  }
+  
