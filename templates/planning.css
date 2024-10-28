@@ -238,6 +238,7 @@ font-size: 20px
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
+    
 }
 
 .planning_container .planning .planning_row .planning_item{
@@ -248,8 +249,13 @@ font-size: 20px
     height: 250px; 
     width: 250px;
     background-color: white;
+    object-fit: cover;
 }
 
+.planning_container .planning .planning_row .planning_item .movie_cover img{
+    max-width: 100%;
+    max-height: 100%;
+    }
 .planning_container .planning .planning_row .planning_item .infos{
     display: flex;
     flex-direction: column;
