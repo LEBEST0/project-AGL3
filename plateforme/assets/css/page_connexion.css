@@ -12,7 +12,6 @@ a{
     color: white;
 }
 #main{
-    height: 100vh;
     background-color: #1E1E1E;
     display: flex;
     flex-direction: column;
