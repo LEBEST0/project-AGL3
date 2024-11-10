@@ -3,7 +3,9 @@
 
 *{
     font-family: "inter";
+    font-size: 1.08em;
     color: whitesmoke;
+
     
     
 }
@@ -11,13 +13,21 @@ a{
     text-decoration: none;
     color: white;
 }
-#main{
-    height: 100vh;
+body{
+ 
+    height: 100vh; /* Assure que le body prend toute la hauteur */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
+    width: 100%; /* Assure que le body prend toute la largeur */
+    overflow: hidden; /* Empêche le scroll */
+}
+main{
     background-color: #1E1E1E;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
    
 }
 #main .section{
@@ -49,6 +59,7 @@ a{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    border: solid red;
 }
 #elt1, #elt2 {
     border-top: none;
@@ -63,12 +74,14 @@ a{
     padding-left: 0; /* Supprime le padding à gauche */
     padding-right: 0; /* Supprime le padding à droite si nécessaire */
     text-align: left; /* Aligne le texte à gauche */
+    width: 80%;
 }
 
 #elt1:focus, #elt2:focus {
     border-bottom: 2px solid #FFFFFF; 
     box-shadow: none; /* Assure que le focus ne change pas le style */
     outline: none; /* Désactive le contour */
+    
 }
 #elt1::placeholder, #elt2::placeholder {
     color: #ffffff; /* Remplacez cette couleur par celle que vous souhaitez */
