@@ -1,0 +1,125 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'DAT/assets/css/resp_insp_voir_doc.css' %}?v={{ version }}">
+
+</head>
+<body>
+      <main>
+
+        <!-- Partie Gauche -->
+        <div class="dashboard">
+            <div class="dashboard_container">
+            <header>
+                <div class="icon">
+                </div>
+                <h2>Doc à Tunis</h2>
+            </header>
+
+            <div class="items">
+                <ul>
+                    <a href="#" class="item item_active"><li > <img src="{% static 'DAT/assets/icons/Play_icon.png' %}" alt=""> <h2> Voir Documentaire </h2> </li></a>
+                    <a href="#" class="item" > <li> <img src="{% static 'DAT/assets/icons/Calendar_icon.png' %}" alt=""> <h2>Planning</h2> </li> </a>
+                    <a href="{% url 'resp_insp_gerer_doc' %}" class="item" > <li> <img src="{% static 'DAT/assets/icons/Plus_icon.png' %}" alt=""> <h2>Gérer Doc.</h2> </li> </a>
+                    <!-- <a href="#" class="item" > <li> <img src="{% static 'DAT/assets/icons/Etoile_icon.png' %}" alt=""> <h2>Noter</h2> </li> </a> -->
+                    <div class="simple_divider horizontal"></div>
+                    <a href="#" class="item" > <li> <img src="{% static 'DAT/assets/icons/Profile_icon.png' %}" alt=""> <h2>Profile</h2> </li> </a> 
+                    <a href="#" class="item" > <li> <img src="{% static 'DAT/assets/icons/Deconnexion_icon.png' %}" alt=""> <h2>Deconnexion</h2> </li> </a> 
+
+                </ul>
+            </div>
+
+        </div>
+            
+        </div>
+
+        <!-- Partie Droite -->
+        <div class="right_side">
+            <div class="main_container">
+
+                <header>
+                    <div class="first_header">
+                        <div class="title">
+                            <h2>Connecté en tant que <span>Responsable d'Inspection</span></h2>
+                        </div>
+
+                        <div class="search_container">
+                            <img src="{% static 'DAT/assets/icons/Recherche_icon.png' %}" alt="">
+                            <form action="" method="post">
+                                <input type="text" placeholder="Rechercher film, réalisateur, producteur">
+                            </form>
+                        </div>
+
+                        <div class="infos_container">
+                            <div class="profile_picture">
+                                <img src="{{ personnage.photo.url }}" alt="">
+                            </div>
+                            <h2 style="text-transform: uppercase;">{{ personnage.prenoms }}<br>{{ personnage.nom }}</h2>
+                        </div>
+                    </div>
+
+                    <div class="carrousel">
+                        <img src="static/images/firstimage.png" alt="">
+                    </div>
+                </header>
+               
+                <div class="catalog">
+                    <div class="first_row">
+                        <h2>Parcourez les documentaires</h2>
+                        <div class="show_all_button">
+                            <h2>
+                                Catalogue  ></h2>
+                        </div>
+                    </div>
+                    
+                    <div class="second_row">
+                        
+                        <div class="movie_row">
+
+
+                            {% for doc in documentaires %}
+                            
+                            <div class="movie_item">
+                                <div class="movie_cover"> 
+                                    <img src="{{ doc.cover.url }}" alt="">  
+                                </div>
+
+                                <div class="movie_name">
+                                    <h2>{{ doc.titre }}</h2>
+                                    <div class="certification_check"> 
+                                        <img src="{% static 'DAT/assets/icons/Check_icon.png' %}" alt="">
+                                    </div>
+                                </div>
+                                
+                        
+                                    <div class="movie_makers">
+                                        <a href=""> <div class="maker"> <img src="{% static 'DAT/assets/icons/Camera_icon.png' %}" alt=""><h2>{{ doc.realisateur.nom }} {{ doc.realisateur.prenoms }} (R)</h2> </div> </a>
+                                          <a href=""> <div class="producer"> <img src="{% static 'DAT/assets/icons/Video_icon.png' %}" alt=""><h2>{{ doc.producteur.nom }} {{ doc.producteur.prenoms }} (P)</h2></div> </a>
+                                       </div>
+                            </div>
+
+                            {% endfor %}
+
+                           
+                            </div>
+
+                           
+
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+           
+      </main>
+</body>
+</html>

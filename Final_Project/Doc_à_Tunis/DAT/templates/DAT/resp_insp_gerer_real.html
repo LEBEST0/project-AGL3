@@ -1,0 +1,121 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'DAT/assets/css/resp_insp_gerer_real.css' %}?v={{ version }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <main>
+
+        <!-- Partie Gauche -->
+        <div class="dashboard">
+            <div class="dashboard_container">
+            <header>
+                <div class="icon">
+                </div>
+                <h2>Doc à Tunis</h2>
+            </header>
+
+            <div class="items">
+                <ul>
+                    <a href="{% url 'resp_insp_voir_doc' %}" class="item"> <li> <img src="{% static 'DAT/assets/icons/Play_icon.png' %}" alt=""> <h2> Voir Documentaire </h2> </li></a>
+                    <a href="#" class="item" > <li> <img src="{% static 'DAT/assets/icons/Calendar_icon.png' %}" alt=""> <h2>Planning</h2> </li> </a>
+                    <a href="#" class="item item_active" > <li> <img src="{% static 'DAT/assets/icons/Plus_icon.png' %}" alt=""> <h2>Gérer Doc.</h2> </li> </a>
+                    <!-- <a href="#" class="item" > <li> <img src="{% static 'DAT/assets/icons/Etoile_icon.png' %}" alt=""> <h2>Noter</h2> </li> </a> -->
+                    <div class="simple_divider horizontal"></div>
+                    <a href="#" class="item" > <li> <img src="{% static 'DAT/assets/icons/Profile_icon.png' %}" alt=""> <h2>Profile</h2> </li> </a> 
+                    <a href="#" class="item" > <li> <img src="{% static 'DAT/assets/icons/Deconnexion_icon.png' %}" alt=""> <h2>Deconnexion</h2> </li> </a> 
+                </ul>
+            </div>
+
+        </div>
+            
+        </div>
+
+        <!-- Partie Droite -->
+         <div class="right_side">
+
+            <div class="main_container">
+
+                <header>
+                    <div class="first_header">
+                        <div class="title">
+                            <h2>Connecté en tant que <span>Jury</span></h2>
+                        </div>
+
+                        <div class="search_container">
+                            <img src="{% static 'DAT/assets/icons/Recherche_icon.png' %}" alt="">
+                            <form action="" method="post">
+                                <input type="text" placeholder="Rechercher film, réalisateur, producteur">
+                            </form>
+                        </div>
+
+
+                        <div class="infos_container">
+                            <div class="profile_picture">
+                                <img src="{{ personnage.photo.url }}" alt="">
+                            </div>
+                            <h2 style="text-transform: uppercase;">{{ personnage.prenoms }}<br>{{ personnage.nom }}</h2>
+                        </div>
+                    </div>
+
+                   <div class="page_name"> <h2>GERER REALISATEUR</h2></div>
+
+                </header>
+
+                <!-- Tableau de gestion des réalisateurs -->
+                
+                <div class="table_container">
+
+                <table>
+                    <thead>
+                        <tr>
+                        <th> <h2>Code</h2></th>
+                        <th><h2>Nom</h2></th>
+                        <th><h2>Prénom</h2></th>
+                        <th><h2>Date de naissance</h2></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for real in realisateurs %}
+                        <tr>
+                            <td><h2>{{ real.code }}</h2></td>
+                            <td><h2>{{ real.nom }}</h2></td>
+                            <td><h2>{{ real.prenoms }}</h2></td>
+                            <td><h2>{{ real.date_naissance }}</h2></td>
+                            <td> <a href="" class="edit"> <img src="{% static 'DAT/assets/icons/Modifier_icon.png' %}" alt=""> </a></td>
+                            <td> <a href="" class="delete"> <img src="{% static 'DAT/assets/icons/Supprimer_icon.png' %}" alt=""> </a></td>
+                        </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+
+            </div>
+
+            <div class="add_button_absolute">
+                <div class="tabs">
+                <a href="{% url 'resp_insp_gerer_prod' %}"> <div class="tab"> <h2>Producteur</h2></div> </a>
+                <div class="tab tab_active"> <h2>Réalisateur</h2></div>
+                <a href="{% url 'resp_insp_gerer_doc' %}"> <div class="tab"> <h2>Documentaire</h2></div> </a>
+                </div>
+
+                <a href="#"><div class="add_button"> <img src="{% static 'DAT/assets/icons/Plus_icon_2.png' %}" alt=""> </div></a>
+              </div>
+
+         </div>
+
+    </main>
+
+</body>
+</html>

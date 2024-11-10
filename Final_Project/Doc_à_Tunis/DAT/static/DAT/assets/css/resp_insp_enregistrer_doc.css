@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+main{
+    height: 100vh;
+    width: 100%;
+    background-color: #202020 ;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+
+
+.left_arrow_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    opacity: 0;
+    animation: fadeIn 300ms ease-in forwards;
+}
+
+.left_arrow_container .back_button{
+    margin-top: 40px;
+    margin-left: 70px;
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms;
+}
+
+.left_arrow_container .back_button:hover{
+  background-color: rgba(255, 255, 255, 0.236);
+}
+
+.left_arrow_container .back_button img{
+    height: 30px;
+    width: 30px;
+    filter: brightness(0)invert(1);
+}
+
+.page_name{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    opacity: 0;
+    animation: fadeIn 300ms ease-in forwards;
+}
+
+.page_name h2{
+    font-weight: 500;
+    font-size:35px;
+    color: white;
+}
+
+/* Form part */
+
+
+/* Input form text */
+.form_container{
+    display: flex;
+    width: 100%;  
+    justify-content: center;
+    margin-top: 60px;
+    opacity: 0;
+    animation: fadeIn 300ms ease-in forwards;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.form_container form input[type="text"]{
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid white ;
+  width: 500px;
+  height: 40px;
+  color: white;
+  font-size: large;
+}
+
+.form_container form input[type="text"]::placeholder{
+  color: white;
+  font-size: large;
+}
+
+.form_container form input[type="text"]:focus{
+  border-bottom: 1px solid white ;
+  outline: none;
+}
+
+/* input form text end  */
+
+/* Supprimer l'icone du calendrier */
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.form_container form input{
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid white ;
+  width: 500px;
+  height: 40px;
+  color: white;
+  font-size: large;
+  margin-top: 60px;
+}
+
+.form_container form input::placeholder{
+  color: white;
+  font-size: large;
+}
+
+.form_container form input:focus{
+  border-bottom: 1px solid white ;
+  outline: none;
+}
+
+/* Cover upload */
+
+.cover_upload{
+  width: 100%;
+  margin-top: 60px;
+  border-bottom: 1px solid white;
+}
+
+.cover_upload label{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.cover_upload label h2{
+  font-weight: 500; 
+  color: white;
+  font-size: large;
+}
+
+.cover_upload label input{
+  display: none;
+}
+
+.cover_upload label img{
+  height: 25px;
+  width: 25px;
+  filter: brightness(0)invert(1);
+}
+
+
+form .select_list{
+  margin-top: 60px;
+  width: 100%;
+  background-color: red;
+}
+
+form .select_list select{
+  background-color: #202020;
+  color: white;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid white;
+  font-size: large;
+}
+
+form .select_list select:focus{
+  outline: none;
+}
+
+
+textarea{
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid white ;
+  width: 500px;
+  height: 40px;
+  color: white;
+  font-size: large;
+  margin-top: 60px;
+  resize: none;
+}
+textarea::placeholder{
+  color: white;
+  font-size: large;
+}
+textarea:focus{
+  border-bottom: 1px solid white ;
+  outline: none;
+}
+
+
+/* Submit button */
+form .button_container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+form button{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 55px;
+  width: 200px;
+  background-color: #C21919;
+  border: none;
+  outline: none;
+  margin-top: 60px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 300ms;
+  margin-bottom: 300px;
+}
+
+form button:hover{
+  background-color: #630909;
+}
+
+form button img{
+  height: 30px;
+  width: 30px;
+  filter: brightness(0)invert(1);
+}
+
+form button h2{
+  color: white;
+}
+
+/* submit button end */
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+
+@keyframes fadeOutY {
+  from {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+  to {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+}
+
+.successful_add{
+  color: #14BB1F;
+  font-size: larger;
+  font-weight: 500;
+  position: absolute;
+  bottom: 50px;
+  left: 40%;
+  opacity: 0;
+  animation: fadeOutY 2s ease-out;
+}
+
+
+/* Barre de defilement  */
+
+::-webkit-scrollbar {
+  width: 12px; /* Largeur de la barre verticale */
+  height: 12px; /* Hauteur de la barre horizontale */
+}
+
+/* Style de la piste de la barre de défilement */
+::-webkit-scrollbar-track {
+  background-color: #202020; /* Couleur de fond de la piste */
+  border-radius: 10px;
+}
+
+/* Style du "thumb" de la barre de défilement (la partie que l’on fait glisser) */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Couleur du thumb */
+  border-radius: 10px;
+  transition: 300ms;
+}
+
+/* Changement de couleur au survol */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Couleur au survol */
+}
