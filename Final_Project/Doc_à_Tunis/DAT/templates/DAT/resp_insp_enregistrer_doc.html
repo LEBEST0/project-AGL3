@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'DAT/assets/css/resp_insp_enregistrer_doc.css' %}">
+</head>
+<body>
+    <main>
+        <div class="left_arrow_container">
+           <a href="{% url 'resp_insp_gerer_doc' %}"> <div class="back_button">
+                <img src="{% static 'DAT/assets/icons/Fleche_gauche.png' %}" alt="">
+            </div>
+        </a>
+        </div>
+
+        <div class="page_name">
+            <h2>ENREGISTRER DOCUMENTAIRE</h2>
+        </div>
+
+        <div class="form_container">
+            <form action="{% url 'resp_insp_enregistrer_doc_traitement' %}" method="post" enctype="multipart/form-data">
+
+              {% csrf_token %}
+              <input type="text" placeholder="Code" name="code">
+              <input type="text" placeholder="Titre" name="titre">
+              <input type="date" placeholder="Date de sortie" name="datedesortie">
+              
+              <div class="cover_upload">
+                <label>
+                 <h2>Cover</h2>
+                  <img src="{% static 'DAT/assets/icons/Upload_icon.png' %}" alt="">
+                  <input type="file" id="imageUpload" name="cover" accept="image/*">
+                </label>
+              </div>
+
+              <div class="select_list">
+                <select name="realisateur" id="">
+                  <option value="" disabled selected hidden>Réalisateur</option>
+                  {% for real in realisateurs %}
+                  <option value="{{ real.code }}">{{ real.code }} {{ real.nom }} {{ real.prenoms }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+
+              <div class="select_list">
+                <select name="producteur" id="">
+                  <option value="" disabled selected hidden>Producteur</option>
+                  {% for prod in producteurs %}
+                  <option value="{{ prod.code }}">{{ prod.code }} {{ prod.nom }} {{ prod.prenoms }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+
+              <textarea id="message" name="description" rows="10" cols="50" placeholder="Description"></textarea>
+              
+                
+                <div class="button_container">
+                    <button type="submit">
+                        <h2>Enregistrer</h2>
+                        <img src="{% static 'DAT/assets/icons/Play_icon.png' %}" alt="">
+                    </button>     
+                </div>
+                
+                
+                
+            </form>
+        </div>
+
+          {% if successful_add %}
+        <h2 class="successful_add">Documentaire ajouté avec succès</h2>
+        {% endif %}
+        
+
+    </main>
+</body>
+</html>

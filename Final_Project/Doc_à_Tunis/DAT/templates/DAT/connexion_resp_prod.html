@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <!-- Favicons -->
+<link href="{% static 'DAT/assets/img/logo.jfif' %}" rel="icon">
+<link href="{% static 'DAT/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+<link href="{% static 'DAT/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'DAT/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+<link href="{% static 'DAT/assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+<link href="{% static 'DAT/assets/vendor/quill/quill.snow.css' %}" rel="stylesheet">
+<link href="{% static 'DAT/assets/vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+<link href="{% static 'DAT/assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+<link href="{% static 'DAT/assets/vendor/simple-datatables/style.css' %}" rel="stylesheet">
+<link href="{% static 'DAT/assets/css/connexion_resp_insp.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="button_container">
+
+    </div>
+    <main id="main">
+        <div class="left_arrow_container">
+            <a href="{% url 'connexion' %}"> <div class="back_button">
+                 <img src="{% static 'DAT/assets/icons/Fleche_gauche.png' %}" alt="">
+             </div>
+         </a>
+         </div>
+        <section class="section"> 
+            <h1>Connectez vous en tant que <strong>Responsable de Production</strong></h1>
+
+            <form action="{% url 'traitement_connexion_resp_prod' %}" id="leForm" method="post">
+                {% csrf_token %}
+                <input  name="email" id="elt1"  class="form-control" type="text" placeholder="Email" type="email">
+                <input  name="password" id="elt2" class="form-control" type="text" placeholder="Mot de passe" type="password">
+
+                {% if error == 1 %}
+                    <h2>Email ou mot de passe incorrect</h2>
+                {% endif %}
+
+               
+                    <button class="btn-visiter" type="submit">
+                        Se connecter <span class="triangle-right"></span>
+                    </button>
+                
+            </form>
+        </section>
+    </main>
+</body>
+</html>

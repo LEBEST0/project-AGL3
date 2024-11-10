@@ -86,11 +86,11 @@ class Producteur(models.Model):
 class Documentaire(models.Model):
     code = models.CharField(max_length=10, unique=True)
     titre = models.CharField(max_length=32)
-    sortie = models.DateField(unique=True)  
+    sortie = models.DateField()  
     sujet = models.TextField()
     realisateur = models.ForeignKey(Realisateur, on_delete=models.CASCADE)
     producteur = models.ForeignKey(Producteur, on_delete=models.CASCADE)
-    note = models.FloatField()
+    note = models.FloatField(blank=True, null=True)
     like = models.IntegerField(default=0) 
     cover = models.ImageField(null=True, blank=True, upload_to='images/')
     
